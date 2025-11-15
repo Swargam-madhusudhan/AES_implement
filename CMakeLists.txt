@@ -5,7 +5,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_COLOR_MAKEFILE ON)
 set(VERBOSE_BUILD ON)
 
-project(AES_impl)
+project(AES_Encryption_GCM_Mode)
 
 list(INSERT CMAKE_MODULE_PATH 0 ${PROJECT_SOURCE_DIR}/support/cmake/modules)
 
@@ -30,5 +30,5 @@ find_path(LIBWB_LIB_DIR NAMES libwb.so HINTS ${LIBWB_ROOT}/lib ${LIBWB_ROOT}/bui
 link_directories(${LIBWB_LIB_DIR})
 
 
-cuda_add_executable(AES_impl AES_impl.cu)
-target_link_libraries(AES_impl wb)
+cuda_add_executable(AES_Encrypt_GCM_128_Seq AES_Encrypt_GCM_128_Seq.cu)
+target_link_libraries(AES_Encrypt_GCM_128_Seq  wb)
